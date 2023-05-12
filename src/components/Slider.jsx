@@ -51,7 +51,6 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
     height: 80%;
-    padding-left: 120px;
 `
 
 const InfoContainer = styled.div`
