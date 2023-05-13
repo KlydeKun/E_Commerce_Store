@@ -24,11 +24,12 @@ const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   margin-left: 25px;
-  padding: 5px;
+  padding: 3px;
 `;
 
 const Input = styled.input`
   border: none;
+  padding: 3px;
 `;
 
 const Left = styled.div`
