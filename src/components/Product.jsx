@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { ShoppingCartOutlined, SearchOutlined, FavoriteBorderOutlined } from "@material-ui/icons"
+import { mobile } from "../Responsive"
 
 const Info = styled.div`
     opacity: 0;
@@ -31,6 +32,7 @@ const Container = styled.div`
     &:hover ${Info}{
         opacity: 1;
     }
+    ${mobile({ minWidth: "200px" })}
 `
 
 const Circle = styled.div`

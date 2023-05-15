@@ -2,15 +2,16 @@ import styled from "styled-components"
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons"
 import { useState } from "react"
 import { sliderItems } from "../Data"
-import { mobile } from "../Responsive"
+import { mobile, tablet, laptop } from "../Responsive"
 
 const Container = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     position: relative;
     overflow: hidden;
     ${mobile({ display: "none" })}
+    ${tablet({ height: "70vh" })}
 `
 
 const Arrow = styled.div`
@@ -44,15 +45,23 @@ const Slide = styled.div`
     display: flex;
     align-items: center;
     background-color: #${props=>props.bg};
+    ${tablet({ height: "70vh" })}
 `
 
 const ImgContainer = styled.div`
     height: 100%;
     flex: 1;
+    padding-top: 70px;
+    ${tablet({ width: "50%" })}
 `
 
 const Image = styled.img`
     height: 80%;
+    width: 80%;
+    padding-left: 40px;
+    object-fit: cover;
+    ${tablet({ width: "500px", objectFit: "contain", paddingRight: "50px" })}
+    ${laptop({ width: "450px", objectFit: "cover", paddingLeft: "20px" })}
 `
 
 const InfoContainer = styled.div`
@@ -62,6 +71,8 @@ const InfoContainer = styled.div`
 
 const Title = styled.h1`
     font-size: 70px;
+    ${'' /* ${tablet({ fontSize: "0px", paddingLeft: "30px" })} */}
+    ${laptop({ fontSize: "50px", paddingLeft: "30px" })}
 `
 
 const Desc = styled.p`
@@ -69,6 +80,8 @@ const Desc = styled.p`
     font-size: 30px;
     font-weight: 500;
     letter-spacing: 3px;
+    ${'' /* ${tablet({ fontSize: "20px", paddingLeft: "30px" })} */}
+    ${laptop({ fontSize: "20px", paddingLeft: "30px" })}
 `
 
 const Button = styled.button`
@@ -76,6 +89,7 @@ const Button = styled.button`
     font-size: 20px;
     background-color: transparent;
     cursor: pointer;
+    ${laptop({ fontSize: "15px", marginLeft: "30px" })}
 `
 
 const Slider = () => {
